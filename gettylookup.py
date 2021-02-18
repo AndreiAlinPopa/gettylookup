@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Feb 17 19:03:32 2021
-
-@author: Andrei
-"""
-
 ############################## imports ####################################
 
 from bs4 import *
@@ -12,7 +5,7 @@ import requests as rq
 import webbrowser
 import time
 
-######################### config code ########################################
+######################### config code #####################################
 
 def find_between( s, first='src="', last='"' ):
     try:
@@ -22,7 +15,7 @@ def find_between( s, first='src="', last='"' ):
     except ValueError:
         return ""
     
-######################### webpage processing #################################
+######################### webpage processing ############################
 
 def request_webpage(search):
     
@@ -60,6 +53,8 @@ def display_images(search, limit):
             webbrowser.open(find_between(value))
             counter += 1
     
+########################## UI search  #################################
+
 while True:
     print("Welcome to the Getty image retrival program")
     time.sleep(2)
