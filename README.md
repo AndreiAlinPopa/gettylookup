@@ -9,4 +9,5 @@ pip install bs4
  3. Locate gettylookup.py. Run the .py file with Python and follow the instructions
 ## How to search
 **Search:** Term to search on GettyImages
+
 **Quantity:** Number of images to open in browser 
