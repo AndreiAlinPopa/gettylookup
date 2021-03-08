@@ -8,6 +8,10 @@ import time
 ######################### config code #####################################
 
 def find_between( s, first='src="', last='"' ):
+    '''
+    Function to pinpoint string between 2 substrings
+    returns: string
+    '''
     try:
         start = s.index( first ) + len( first )
         end = s.index( last, start )
@@ -18,7 +22,10 @@ def find_between( s, first='src="', last='"' ):
 ######################### webpage processing ############################
 
 def request_webpage(search):
-    
+    '''
+    search: search item to request on gettyimages
+    returns: list full of image links
+    '''
     usr_agent = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"}
     request_url = "https://www.gettyimages.co.uk/photos/" + search.replace(" ", "-")
 
@@ -39,7 +46,11 @@ def request_webpage(search):
 ###################### image display ##################################
     
 def display_images(search, limit):
-    
+    '''
+    search: search query
+    limit: how many imgs to retrieve
+    returns: absolutely nothing (opens browser with images)
+    '''
     link = request_webpage(search)
     counter = 0
     limit = int(limit)
